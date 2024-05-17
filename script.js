@@ -72,8 +72,10 @@ function buscarAtivos(event) {
     const ativosFiltrados = Object.keys(allAtivos).reduce((filtered, key) => {
         const ativo = allAtivos[key];
         const nome = ativo.nome?.toLowerCase() || "";
+        const descricao = ativo.descricao?.toLowerCase() || "";
         const etiqueta = ativo.etiqueta?.toLowerCase() || "";
-        if (nome.includes(searchInput) || etiqueta === searchInput) {
+        // Verifica se o termo de busca está presente no nome, na etiqueta ou na descrição
+        if (nome.includes(searchInput) || etiqueta.includes(searchInput) || descricao.includes(searchInput)) {
             filtered[key] = ativo;
         }
         return filtered;
