@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ativos Cadastrados</title>
+    <!-- Bulma CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <style>
+        .list-item {
+            padding: 15px;
+            margin-bottom: 20px;
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+        }
+        .card-image img {
+            max-height: 300px;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+<div class="container mt-3">
+    <div class="columns mb-3">
+        <div class="column is-8">
+            <h1 class="title">Ativos Cadastrados</h1>
+            <p id="total-count" class="subtitle is-6"></p>
+        </div>
+        <div class="column is-4">
+            <!-- Formulário de busca -->
+            <form id="search-form" class="field has-addons">
+                <div class="control is-expanded">
+                    <input type="text" id="search-input" name="search-input" class="input" placeholder="Buscar por etiqueta ou nome" aria-label="Buscar por etiqueta ou nome">
+                </div>
+                <div class="control">
+                    <button type="submit" class="button is-primary">Buscar</button>
+                </div>
+                <div class="control">
+                    <button type="button" id="clear-button" class="button is-light">Limpar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="columns is-multiline">
+        <div class="column is-one-third" id="column1"></div>
+        <div class="column is-one-third" id="column2"></div>
+        <div class="column is-one-third" id="column3"></div>
+    </div>
+</div>
+
+<!-- Botões de paginação -->
+<div class="container">
+    <div class="columns is-mobile is-centered my-4">
+        <div class="column is-narrow">
+            <button id="prev-page" class="button is-info">Anterior</button>
+        </div>
+        <div class="column is-narrow">
+            <span id="page-num" class="tag is-large"></span>
+        </div>
+        <div class="column is-narrow">
+            <button id="next-page" class="button is-info">Próxima</button>
+        </div>
+    </div>
+</div>
+
+<!-- Arquivo JavaScript -->
+<script src="script.js" defer></script>
+</body>
+</html>
