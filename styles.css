@@ -1,21 +1,42 @@
-.container {
-    display: flex;
-}
-
-.column {
-    flex: 1;
-    padding: 0 10px;
-}
-
-/* Estilo para cada item da lista */
 .list-item {
+    padding: 15px;
     margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
     border-radius: 5px;
 }
 
-.list-item img {
-    max-width: 100%;
-    height: auto;
+.card-image img {
+    max-height: 300px;
+    object-fit: contain;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.navbar-brand .navbar-item.logo-container {
+    padding: 0;
+}
+
+.navbar-item img {
+    max-height: 150px;
+}
+
+.navbar-brand, .navbar-menu {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-menu {
+    margin-left: 25px;
+    flex-grow: 1;
+    justify-content: flex-start;
+}
+
+.navbar-container {
+    margin-top: 30px;
 }

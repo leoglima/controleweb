@@ -52,7 +52,7 @@ function exibirAtivosPorPagina(page, ativos = allAtivos) {
                     <img src="${ativo.imageURL}" alt="${ativo.descricao}">
                 </figure>
                 <br/>
-                <a href="${ativo.imageURL}" target="_blank" class="button is-link">ver imagem</a>
+                <a href="${ativo.imageURL}" target="_blank" class="button is-link is-fullwidth">ver imagem</a>
             </div>
         `;
         if (i % 3 === 0) {

@@ -6,27 +6,29 @@
     <title>Ativos Cadastrados</title>
     <!-- Bulma CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <style>
-        .list-item {
-            padding: 15px;
-            margin-bottom: 20px;
-            background-color: #f8f9fa;
-            border: 1px solid #dee2e6;
-            border-radius: 5px;
-        }
-        .card-image img {
-            max-height: 300px;
-            object-fit: contain;
-        }
-    </style>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="container mt-3">
-    <div class="columns mb-3">
+
+<!-- Menu de navegação -->
+<div class="container navbar-container">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item logo-container" href="#">
+                <img src="logo.webp" class="logo" alt="Logo">
+            </a>
+        </div>
         <div class="column is-8">
             <h1 class="title">Ativos Cadastrados</h1>
             <p id="total-count" class="subtitle is-6"></p>
         </div>
+    </nav>
+</div>
+
+<div class="container mt-3">
+    <div class="columns mb-3">
+
         <div class="column is-4">
             <!-- Formulário de busca -->
             <form id="search-form" class="field has-addons">
@@ -37,7 +39,7 @@
                     <button type="submit" class="button is-link">Buscar</button>
                 </div>
                 <div class="control">
-                    <button type="button" id="clear-button" class="button is-light">Limpar</button>
+                    <button type="button" id="clear-button" class="button is-danger">Limpar</button>
                 </div>
             </form>
         </div>
